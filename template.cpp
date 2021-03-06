@@ -2,27 +2,34 @@
 using namespace std;
 
 int main() {
-    //standard input and output
+    ifstream fin("_.in");
+    ofstream fout("_.out");
     int n;
     cin >> n;
     int _[n];
     for (int i=0; i<n; i++) {
         cin >> _[i];
     }
-    int result=0;
-    cout << result << "\n";
-    //file input and output
-    ifstream fin("_.in");
-    ofstream fout("_.out");
-    int n;
-    fin >> n;
-    int _[n];
+    pair<int,int> _[n];
+    //tuple<int,int,int> _[n];
     for (int i=0; i<n; i++) {
-        fin >> _[i];
+        cin >> _[i];
+    }
+    int _[n][m];
+    for (int i=0; i<n; i++) {
+        for (int j=0; j<m; j++) {
+            cin >> _[i][j];
+        }
     }
     int result=0;
-    fout << result << "\n";
+    cout << result << "\n";
     return 0;
+}
+
+//for dfs/flood fill
+bool visited[n];
+for (int i=0; i<n; i++) {
+    visited[i]=false;
 }
 
 //depth first search
@@ -64,9 +71,4 @@ int bs() {
         }
     }
     return l;
-}
-
-bool visited[n];
-for (int i=0; i<n; i++) {
-    visited[i]=false;
 }

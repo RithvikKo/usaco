@@ -6,7 +6,6 @@ _=[int(input()) for _ in range(n)]
 _=[list(map(int,input().split())) for _ in range(n)]
 
 result=_
-
 print(result)
 
 #file input
@@ -22,4 +21,4 @@ _=[list(map(int,line.split())) for line in lines[1:]]
 result=_
 
 with open('_.out','w') as fout:
-    fout.write(str(result)+'\n')
+    fout.write(f'{result}\n')
